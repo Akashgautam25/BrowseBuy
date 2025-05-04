@@ -10,9 +10,8 @@ const Footer = () => {
   };
 
   return (
-    <div >
-      <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 text-sm pt-9" >
-        
+    <div className='pt-14'>
+      <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 text-sm ">
         {/* Logo and Description */}
         <div className="text-center sm:text-left">
           <img src={assets.logo} alt="Forever Logo" className="mb-5 w-32 mx-auto sm:mx-0" />
@@ -23,7 +22,7 @@ const Footer = () => {
 
         {/* Company Links */}
         <div className="text-center sm:text-left">
-          <p className="text-xl font-semibold mb-5">Explore BrowseBuy</p>
+          <p className="text-xl font-semibold mb-5">Explore BrwoseBuy</p>
           <ul className="flex flex-col text-gray-600 cursor-pointer">
             <li onClick={scrollToTop} className="mb-2 hover:text-black transition duration-300">Home</li>
             <li onClick={scrollToTop} className="mb-2 hover:text-black transition duration-300">About Us</li>
@@ -37,7 +36,7 @@ const Footer = () => {
           <p className="text-xl font-semibold mb-5">Get in Touch</p>
           <ul className="flex flex-col text-gray-600">
             <li className="mb-2">📞 +91 8077554658</li>
-            <li className="mb-2">📧 akashgautamm22@gmail.com</li>
+            <li className="mb-2">📧 contact@BrowseBuy.com</li>
           </ul>
         </div>
       </div>
