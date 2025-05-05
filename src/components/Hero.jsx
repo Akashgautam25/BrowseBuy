@@ -25,7 +25,7 @@ const Hero = () => {
           </div>
 
         <Link to="/collection">
-          <button className="mt-2 px-6 py-2 bg-gray-600 text-white rounded-full shadow transition-all duration-300 hover:shadow-2xl">
+          <button className="mt-2 px-6 py-2 bg-gray-600 text-white rounded-full shadow transition-all duration-300 hover:shadow-2xl hover:scale-110">
             Shop Now
           </button>
           
@@ -33,8 +33,8 @@ const Hero = () => {
       </div>
 
       {/* Hero Right Side */}
-      <div className="w-full sm:w-1/2 mt-8 sm:mt-0 hover:">
-        <img src={assets.hero_img} alt="Hero" className="w-full h-auto object-cover" />
+      <div className="w-full sm:w-1/2 mt-8 sm:mt-0 :">
+        <img src={assets.hero_img} alt="Hero" className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
       </div>
     </div>
   );

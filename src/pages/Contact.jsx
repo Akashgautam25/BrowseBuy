@@ -25,9 +25,9 @@ const Contact = () => {
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col sm:flex-row justify-start items-center gap-10 my-10 mb-28">
+      <div className="flex flex-col sm:flex-row justify-between items-start gap-10 my-10 mb-28">
         {/* Google Map Embed */}
-        <div className="w-full sm:w-[48%] flex justify-start items-center">
+        <div className="w-60 sm:w-[48%] flex justify-start items-center">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3490.1503215831754!2d77.0875463761463!3d28.98291626808207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390db15c164f0a91%3A0xcab7be79bc1b3bac!2sNewton%20School%20of%20Technology%2C%20Delhi%20NCR!5e0!3m2!1sen!2sin!4v1746383558536!5m2!1sen!2sin"
             width="100%" // Make map responsive
@@ -39,8 +39,8 @@ const Contact = () => {
           />
         </div>
 
-        {/* Contact Form Box */}
-        <div className="w-60 sm:w-[48%] p-6 bg-white shadow-lg rounded-lg mb-10 items-center text-center pt-2">
+                {/* Contact Form Box */}
+                <div className="w-60 sm:w-[48%] p-6 bg-white shadow-lg rounded-lg mb-10 items-center text-center pt-2">
           <div>
             <h3 className="text-2xl font-medium text-center mb-6">Send Us A Message</h3>
 
@@ -103,8 +103,33 @@ const Contact = () => {
               </div>
             </form>
           </div>
+          </div>
         </div>
-      </div>
+      
+
+     {/* Our Store and Newsletter Section */}
+<div className="flex flex-col sm:flex-row justify-between items-start gap-10 my-10">
+  {/* Our Store Section */}
+  <div className="w-full sm:w-[48%]">
+    <p className="font-semibold text-gray-600">Our Store</p>
+    <p className="text-gray-500">
+      NH44, Chowk, Bahalgarh, Sonipat, Haryana 131021
+    </p>
+
+    <p className="text-gray-800">
+      Tel: <span className="text-gray-500">+91 8077554658</span>
+      <br/>
+      Email: <span className="text-gray-500">akashgautamm22@gmail.com</span>
+    </p>
+
+  </div>
+
+  {/* Newsletter Section */}
+  <div className="w-full sm:w-[48%]">
+    <NewsLetterBox />
+  </div>
+</div>
+
 
       {/* Footer Section */}
       <Footer />
