@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Footer from '../components/Footer';
 
 const ProductGrid = () => {
   const [products, setProducts] = useState([]);
@@ -49,7 +50,9 @@ const ProductGrid = () => {
           ))}
         </div>
       )}
+      <Footer/>
     </div>
+    
   );
 };
 

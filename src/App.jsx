@@ -28,7 +28,7 @@ const App = () => {
           <Route path='/place-order' element={<PlaceOrder />} />
           <Route path='/orders' element={<Orders />} />
         </Routes>
-        <Footer/>
+
       </Akash>
     </div>
   )

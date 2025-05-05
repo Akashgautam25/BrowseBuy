@@ -1,6 +1,7 @@
 
 import NewsLetterBox from '../components/NewsLetterBox';
 import Title from '../components/Title';
+import Footer from '../components/Footer';
 
 const Contact = () => {
   const scrollToTop = () => {
@@ -130,6 +131,8 @@ const Contact = () => {
     <NewsLetterBox />
   </div>
 </div>
+<Footer/>
+
 
     </div>
   );

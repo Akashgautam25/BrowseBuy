@@ -28,22 +28,24 @@ const Navbar = () => {
         </NavLink>
       </ul>
 
-      <div className="flex items-center gap-6">
-        <img src={assets.search_icon} className="w-5 cursor-pointer" alt="search" />
-        <div className="group relative">
-          <img src={assets.profile_icon} className="w-5 cursor-pointer" alt="profile" />
-        </div>
-        <NavLink to="/cart" className="relative">
-          <img src={assets.cart_icon} alt="cart" className="w-5 min-w-5" />
-          <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]">
-            10
-          </p>
-        </NavLink>
+      <div className="flex items-center gap-4">
+        <Link
+          to="/login"
+          className="px-4 py-2 text-sm font-medium text-black border border-black rounded-full hover:bg-black hover:text-white transition"
+        >
+          Login
+        </Link>
+        <Link
+          to="/signup"
+          className="px-4 py-2 text-sm font-medium text-white bg-black border border-black rounded-full hover:bg-white hover:text-black transition"
+        >
+          Sign Up
+        </Link>
         <img
           src={assets.menu_icon}
           alt="menu"
           className="w-5 cursor-pointer sm:hidden"
-          onClick={() => setVisible(true)} // Make sure setVisible is defined in your component or state
+          onClick={() => setVisible(true)} // Make sure setVisible is defined if using this
         />
       </div>
     </div>
