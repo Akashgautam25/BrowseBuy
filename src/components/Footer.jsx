@@ -45,7 +45,7 @@ const Footer = () => {
       <div className="mt-10">
         <hr className="border-t-1 border-gray-300" />
         <p className="py-5 text-sm text-center text-gray-500">
-          &copy; 2024 BrowseBuy.com — All Rights Reserved
+          &copy; 2025 BrowseBuy.com — All Rights Reserved
         </p>
       </div>
     </div>
