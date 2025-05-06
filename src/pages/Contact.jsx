@@ -2,7 +2,7 @@
 import NewsLetterBox from '../components/NewsLetterBox';
 import Title from '../components/Title';
 import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
+
 
 const Contact = () => {
   const scrollToTop = () => {

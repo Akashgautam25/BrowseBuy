@@ -18,7 +18,8 @@ const Login = () => {
   return (
     <div className="min-h-screen flex items-start justify-center pt-40 px-4">
       <div className="bg-white p-8 md:p-10 rounded-2xl shadow-2xl w-full max-w-md">
-        <h2 className="text-black text-3xl font-bold mb-8 text-center">Sign In</h2>
+        <h2 className="text-black text-3xl font-bold mb-2 text-center">Sign In</h2>
+        <p className="text-black text-2xl text-center mb-8 text-opacity-80">Welcome back! Please enter your credentials.</p>
 
         <div className="space-y-5">
           <input
@@ -49,9 +50,9 @@ const Login = () => {
         </div>
 
         <div className="mt-4 text-xs p-3 rounded-lg text-center border-black border-2">
-          <span>Demo Gmail:- akash@gmail.com</span>
-          <br/>
-          <span>Password:- Akash!Test@9876</span>
+          <span>Demo Gmail: akash@gmail.com</span>
+          <br />
+          <span>Password: Akash!Test@9876</span>
         </div>
       </div>
     </div>
