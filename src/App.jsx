@@ -14,9 +14,9 @@ import Footer from './components/Footer'
 
 const App = () => {
   return (
-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
+    <div className='px-4 sm:px-[5vw]'>
       <Akash>
-        <Navbar />
+        <Navbar/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/collection' element={<Collection />} />
@@ -27,6 +27,7 @@ const App = () => {
           <Route path='/login' element={<Login />} />
           <Route path='/place-order' element={<PlaceOrder />} />
           <Route path='/orders' element={<Orders />} />
+          <Route path='/Footer' element ={<Footer/>}></Route>
         </Routes>
 
       </Akash>

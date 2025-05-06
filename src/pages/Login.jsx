@@ -1,68 +1,60 @@
-import { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const [currentState, setCurrentState] = useState('Sign Up');
+  const navigate = useNavigate();
 
-  const onSubmmitHandler = (e) => {
-    e.preventDefault();
+  const handleLogin = () => {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (email === 'akash@gmail.com' && password === 'Akash!Test@9876') {
+      navigate('/');
+    } else {
+      alert('Invalid credentials');
+    }
   };
 
   return (
-    <form
-      onSubmit={onSubmmitHandler}
-      className="flex flex-col items-center w-[90%] sm:max-w-96 m-auto mt-14 gap-4 text-gray-800"
-    >
-      <div className="inline-flex items-center gap-2 mb-2 mt-10">
-        <p className="prata-regular text 3x1"> {currentState}</p>
-        <hr className="border-none h-[1.5px] w-8 bg-gray-800 " />
-      </div>
+    <div className="min-h-screen flex items-start justify-center pt-40 px-4">
+      <div className="bg-white p-8 md:p-10 rounded-2xl shadow-2xl w-full max-w-md">
+        <h2 className="text-black text-3xl font-bold mb-8 text-center">Sign In</h2>
 
-      <div className="w-full px-3 py-2 flex flex-col gap-4">
-        {currentState === 'Sign Up' ? (
+        <div className="space-y-5">
           <input
+            id="email"
             type="text"
-            className="w-Full px-3 py-2 border border-gray-880"
-            placeholder="Name"
-            required
+            placeholder="Username / Email"
+            className="w-full px-4 py-3 rounded-xl text-black bg-gray-100 placeholder-gray-500 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black transition"
           />
-        ) : null}
-
-        <input
-          type="email"
-          className="w-Full px-3 py-2 border border-gray-880"
-          placeholder="Email"
-          required
-        />
-        <input
-          type="password"
-          className="w-Full px-3 py-2 border border-gray-880"
-          placeholder="Password"
-          required
-        />
-
-        <div className="w-full flex justify-between text-sm mt-[-8px]">
-          <p className=" cursor-pointer">Forgot your password?</p>
-          {currentState === 'Login' ? (
-            <p
-              onClick={() => setCurrentState('Sign Up')}
-              className="cursor-pointer"
-            >
-              Create Account
-            </p>
-          ) : (
-            <p
-              onClick={() => setCurrentState('Login')}
-              className="cursor-pointer"
-            >
-              Login Here
-            </p>
-          )}
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            className="w-full px-4 py-3 rounded-xl text-black bg-gray-100 placeholder-gray-500 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black transition"
+          />
+          <button
+            onClick={handleLogin}
+            className="w-full py-3 text-white font-semibold bg-black rounded-xl hover:bg-gray-800 transition"
+          >
+            Sign In
+          </button>
         </div>
-        <button className="w-1/2 m-auto bg-black text-white px-8 py-2 mt-4 ">
-          {currentState === 'Login' ? 'Sign In' : 'Sign Up'}
-        </button>
+
+        <div className="mt-6 text-center text-gray-600 text-sm">
+          Don't have an account?{' '}
+          <a href="#" className="text-black font-medium hover:underline">
+            Sign Up
+          </a>
+        </div>
+
+        <div className="mt-4 text-xs p-3 rounded-lg text-center border-black border-2">
+          <span>Demo Gmail:- akash@gmail.com</span>
+          <br/>
+          <span>Password:- Akash!Test@9876</span>
+        </div>
       </div>
-    </form>
+    </div>
   );
 };
 
