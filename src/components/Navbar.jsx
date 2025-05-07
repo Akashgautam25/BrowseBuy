@@ -1,6 +1,6 @@
 import React from 'react';
 import { assets } from '../assets/assets';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -27,15 +27,16 @@ const Navbar = () => {
           <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
         </NavLink>
       </ul>
+
       <div className="flex items-center gap-4">
         <Link
-          to="/login"
+          to="/login?mode=signin"
           className="px-4 py-2 text-sm font-medium text-black border border-black rounded-full hover:bg-black hover:text-white transition"
         >
           Sign In
         </Link>
         <Link
-          to="/signup"
+          to="/login?mode=signup"
           className="px-4 py-2 text-sm font-medium text-white bg-black border border-black rounded-full hover:bg-white hover:text-black transition"
         >
           Sign Up
@@ -44,7 +45,6 @@ const Navbar = () => {
           src={assets.menu_icon}
           alt="menu"
           className="w-5 cursor-pointer sm:hidden"
-          onClick={() => setVisible(true)} // Make sure setVisible is defined if using this
         />
       </div>
     </div>
