@@ -1,6 +1,6 @@
 import { assets } from '../assets/assets';
 import Footer from '../components/Footer';
-import Title from '../Components/Title';
+import Title from '../components/Title';
 
 const About = () => {
   return (
