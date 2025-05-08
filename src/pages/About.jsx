@@ -8,7 +8,7 @@ const About = () => {
 
       {/* Header */}
       <div className="text-center mb-16">
-        <Title text1="GET TO KNOW" text2="BROWSEBUY" />
+        <Title text1={'GET TO KNOW'} text2={'BROWSEBUY'} />
         <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-gray-600">
           A bold step toward fairer e-commerce — where choice, quality, and community matter.
         </p>
