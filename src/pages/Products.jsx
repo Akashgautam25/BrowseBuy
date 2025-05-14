@@ -55,36 +55,37 @@ function CollectionPage() {
     }
 
     if (selectedCategories.length > 0) {
-      filtered = filtered.filter((p) =>
-        selectedCategories.some((cat) =>
-          p.category?.toLowerCase().includes(cat.toLowerCase())
-        )
-      );
+      filtered = filtered.filter((p) => {
+        if (!p.category) return false;
+        return selectedCategories.some(
+          (cat) => p.category.toLowerCase() === cat.toLowerCase()
+        );
+      });
     }
 
     if (priceRange.min) {
       filtered = filtered.filter(
-        (p) => p.price?.current?.value >= parseFloat(priceRange.min)
+        (p) => p.price >= parseFloat(priceRange.min)
       );
     }
 
     if (priceRange.max) {
       filtered = filtered.filter(
-        (p) => p.price?.current?.value <= parseFloat(priceRange.max)
+        (p) => p.price <= parseFloat(priceRange.max)
       );
     }
 
-    // Rating filter
     if (selectedRating) {
       filtered = filtered.filter((p) => {
-        const productRating = parseFloat(p.rating?.rate ?? 0);
+        const productRating = parseFloat(p.rating || 0);
         return productRating >= parseFloat(selectedRating);
       });
     }
 
     if (selectedSizes.length > 0) {
       filtered = filtered.filter((p) => {
-        const simulatedSize = ['XS', 'S', 'M', 'L', 'XL', 'XXL'][p.id % 6];
+        const sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
+        const simulatedSize = sizes[p.id % sizes.length];
         return selectedSizes.includes(simulatedSize);
       });
     }
@@ -98,9 +99,9 @@ function CollectionPage() {
   };
 
   return (
-    <div className="flex min-h-screen bg-white">
+    <div className="flex flex-col lg:flex-row min-h-screen bg-white">
       {/* Sidebar */}
-      <div className="w-64 h-screen overflow-y-auto border-r border-gray-100 bg-white sticky top-0 px-4 py-6">
+      <div className="w-full lg:w-64 lg:h-screen lg:overflow-y-auto border-b lg:border-r border-gray-100 bg-white px-4 py-6 sticky top-0">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold">Filters</h2>
           <button onClick={clearAll} className="text-sm text-gray-500 hover:text-black">
@@ -108,10 +109,13 @@ function CollectionPage() {
           </button>
         </div>
 
-        {/* Category */}
+        {/* Filters (unchanged structure) */}
+        {/* ...Category, Price, Size, Rating filters (unchanged)... */}
+        {/* Category Filter */}
         <div className="border-b py-4">
           <button onClick={() => toggleFilter('category')} className="flex justify-between w-full text-base font-medium text-gray-800">
-            <span>Category</span><span>{openFilter === 'category' ? '−' : '+'}</span>
+            <span>Category</span>
+            <span>{openFilter === 'category' ? '−' : '+'}</span>
           </button>
           {openFilter === 'category' && (
             <div className="mt-3 space-y-2 text-[15px] text-gray-700">
@@ -130,10 +134,11 @@ function CollectionPage() {
           )}
         </div>
 
-        {/* Price */}
+        {/* Price Filter */}
         <div className="border-b py-4">
           <button onClick={() => toggleFilter('price')} className="flex justify-between w-full text-base font-medium text-gray-800">
-            <span>Price</span><span>{openFilter === 'price' ? '−' : '+'}</span>
+            <span>Price</span>
+            <span>{openFilter === 'price' ? '−' : '+'}</span>
           </button>
           {openFilter === 'price' && (
             <div className="mt-3 flex flex-col gap-2">
@@ -159,10 +164,11 @@ function CollectionPage() {
           )}
         </div>
 
-        {/* Size */}
+        {/* Size Filter */}
         <div className="border-b py-4">
           <button onClick={() => toggleFilter('size')} className="flex justify-between w-full text-base font-medium text-gray-800">
-            <span>Size & Fit</span><span>{openFilter === 'size' ? '−' : '+'}</span>
+            <span>Size &amp; Fit</span>
+            <span>{openFilter === 'size' ? '−' : '+'}</span>
           </button>
           {openFilter === 'size' && (
             <div className="mt-3 grid grid-cols-3 gap-2 text-sm">
@@ -179,10 +185,11 @@ function CollectionPage() {
           )}
         </div>
 
-        {/* Rating */}
+        {/* Rating Filter */}
         <div className="py-4">
           <button onClick={() => toggleFilter('rating')} className="flex justify-between w-full text-base font-medium text-gray-800">
-            <span>Rating</span><span>{openFilter === 'rating' ? '−' : '+'}</span>
+            <span>Rating</span>
+            <span>{openFilter === 'rating' ? '−' : '+'}</span>
           </button>
           {openFilter === 'rating' && (
             <div className="mt-3 space-y-2 text-[15px] text-gray-700">
@@ -196,7 +203,7 @@ function CollectionPage() {
                     onChange={() => setSelectedRating(rating.toString())}
                     className="mr-2"
                   />
-                  {rating}★ & up
+                  {rating}★ &amp; up
                 </label>
               ))}
             </div>
@@ -205,7 +212,7 @@ function CollectionPage() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 p-6">
+      <div className="flex-1 p-4 sm:p-6">
         {/* Search Bar */}
         <div className="mb-6 flex justify-center">
           <div className="w-full sm:w-3/4 md:w-2/3 relative">
@@ -237,24 +244,24 @@ function CollectionPage() {
             {filteredProducts.length === 0 ? (
               <div className="text-center text-gray-500 mt-10">No products found.</div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
                 {filteredProducts.map((p) => (
                   <div
                     key={p.id}
                     onClick={() => handleProductClick(p.id)}
-                    className="cursor-pointer border-2 rounded-md hover:shadow-lg transition overflow-hidden flex flex-col"
+                    className="cursor-pointer border rounded-lg overflow-hidden bg-white shadow-sm hover:shadow-md transition duration-300"
                   >
-                    <div className="flex items-center justify-center overflow-hidden">
+                    <div className="h-64 bg-gray-50 flex items-center justify-center overflow-hidden">
                       <img
                         src={p.image}
                         alt={p.title}
-                        className="h-full object-contain p-4 transition-transform duration-300 hover:scale-105"
+                        className="max-h-full object-contain transition-transform duration-300 hover:scale-105"
                       />
                     </div>
-                    <div className="mb-4 text-start ml-5">
-                      <p className="font-medium text-gray-900 mb-1 line-clamp-2">{p.title}</p>
-                      <p className="text-base font-normal text-black">Price:₹{p.price}</p>
-                      <p className="text-sm text-gray-600 mt-1">Rating:{p.rating}</p>
+                    <div className="p-4">
+                      <p className="font-medium text-gray-900 text-base mb-1 line-clamp-2">{p.title}</p>
+                      <p className="text-sm text-black mb-1">₹{p.price}</p>
+                      <p className="text-xs text-gray-600">Rating: {p.rating || 'N/A'}</p>
                     </div>
                   </div>
                 ))}

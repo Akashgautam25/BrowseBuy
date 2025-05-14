@@ -15,25 +15,29 @@ const Hero = () => {
           <span className="text-red-500">Wear</span> Confidence,<br className="hidden sm:block" /> Every Day
         </h1>
 
-        <p className="text-gray-600 text-sm md:text-base max-w-md">
+        <p className="text-gray-600 text-sm md:text-base max-w-md sm:max-w-lg">
           Discover outfits that make you feel bold, stylish, and comfortable. Shop the latest trends tailored for you.
         </p>
-        <div className="flex items-center gap-2 pl-56">
-            <p className="font-medium text-sm md:text-base">LATEST COLLECTIONS</p>
-            <p className="w-8 md:w-11 h-[2px] bg-[#414141]"></p>
-          </div>
+        
+        <div className="flex items-center gap-2">
+          <p className="font-medium text-sm md:text-base">LATEST COLLECTIONS</p>
+          <p className="w-8 md:w-11 h-[2px] bg-[#414141]"></p>
+        </div>
 
         <Link to="/collection">
-          <button className="mt-2 px-6 py-2 bg-gray-600 text-white rounded-full shadow transition-all duration-300 hover:shadow-2xl hover:scale-110">
+          <button className="mt-4 px-6 py-2 bg-gray-600 text-white rounded-full shadow transition-all duration-300 hover:shadow-2xl hover:scale-110">
             Shop Now
           </button>
-          
         </Link>
       </div>
 
       {/* Hero Right Side */}
-      <div className="w-full sm:w-1/2 mt-8 sm:mt-0 :">
-        <img src={assets.hero_img} alt="Hero" className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" />
+      <div className="w-full sm:w-1/2 mt-8 sm:mt-0">
+        <img 
+          src={assets.hero_img} 
+          alt="Hero" 
+          className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105" 
+        />
       </div>
     </div>
   );

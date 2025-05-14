@@ -4,6 +4,7 @@ import { NavLink, Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false); // For mobile menu toggle
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
 
@@ -19,12 +20,19 @@ const Navbar = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Toggle mobile menu visibility
+  const toggleMobileMenu = () => {
+    setShowMobileMenu((prev) => !prev);
+  };
+
   return (
     <div className="flex items-center justify-between py-5 font-medium border-b border-gray-200 relative z-50">
+      {/* Logo */}
       <NavLink to="/">
         <img src={assets.logo} alt="logo" className="w-36" />
       </NavLink>
 
+      {/* Desktop Navigation Links */}
       <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
         <NavLink to="/" className="flex flex-col items-center gap-1">
           <p>HOME</p>
@@ -40,6 +48,7 @@ const Navbar = () => {
         </NavLink>
       </ul>
 
+      {/* Right Section (Search, Cart, Profile Dropdown, Hamburger Menu) */}
       <div className="flex items-center gap-5 relative">
         {/* Search Icon */}
         <img
@@ -84,13 +93,34 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Hamburger for mobile */}
+        {/* Hamburger Menu (Mobile) */}
         <img
           src={assets.menu_icon}
           alt="menu"
           className="w-5 cursor-pointer sm:hidden"
+          onClick={toggleMobileMenu} // Toggle mobile menu visibility
         />
       </div>
+
+      {/* Mobile Navigation Menu (When Hamburger Icon is Clicked) */}
+      {showMobileMenu && (
+        <div className="absolute top-16 left-0 w-full bg-white border-b border-gray-200 sm:hidden">
+          <ul className="flex flex-col items-center py-4 text-sm text-gray-700">
+            <NavLink to="/" className="py-2" onClick={toggleMobileMenu}>
+              HOME
+            </NavLink>
+            <NavLink to="/collection" className="py-2" onClick={toggleMobileMenu}>
+              PRODUCTS
+            </NavLink>
+            <NavLink to="/about" className="py-2" onClick={toggleMobileMenu}>
+              ABOUT
+            </NavLink>
+            <NavLink to="/contact" className="py-2" onClick={toggleMobileMenu}>
+              CONTACT
+            </NavLink>
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

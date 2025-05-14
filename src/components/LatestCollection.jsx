@@ -1,4 +1,3 @@
-// LatestCollection.jsx
 import React from 'react';
 import { assets } from '../assets/assets';
 import { Link } from 'react-router-dom'; // Correct import for routing
@@ -49,6 +48,7 @@ const LatestCollection = () => {
         </p>
       </div>
 
+      {/* Responsive grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {products.map((product) => (
           <div key={product.id} className="text-center">
