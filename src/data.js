@@ -360,7 +360,7 @@ const datas = [
       "brand": "Van Heusen",
       "price": 1599,
       "rating": 4.6,
-      "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTOqZWGWak2wJzAKQldUzJtKI3zlLEMVIBO-sJA6Q55ofkpEWlnYKQJOUH1Fn9SXRyueXpKrymp3RHcjHCHT_QJl_5JuGXTOL7ctd8gmteh323vjcZiQufP&usqp=CAc",
+      image: assets.product33,
       "description": "This formal shirt from Van Heusen is perfect for office wear, with its sleek design and crisp fabric."
     },
     {
@@ -371,7 +371,7 @@ const datas = [
       "brand": "Decathlon",
       "price": 599,
       "rating": 4.2,
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR6tEevMCp2TCo6cixG977QXQsj5qa0enbB2Xsgsuuk3vpWVJnJq1w80a9CuSOz8f0tNh2aFosWdltoJEhyWjWzAj7jrCqeaOJSxurNAUI5ryXV03Ljf7lg&usqp=CAc",
+      image: assets.product34,
       "description": "These sporty shorts from Decathlon are made for active kids. Ideal for both sports and casual activities."
     },
     {
@@ -382,7 +382,7 @@ const datas = [
       "brand": "Nike",
       "price": 1399,
       "rating": 4.7,
-      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQMO85-G05s98CDQhcJJxqcOCsY6QgVQ7WuvNmo5z42jCtw94qPJrl1Vo85NoJUb9bosWpf_jeSHiofUDwkCFX1pA8iG2zKH-LRnrcIbL1snNQDnvo8gdebU6oNsiSVu1e-hn5csC4&usqp=CAc",
+      image: assets.product35,
       "description": "This performance-driven Nike sports T-shirt offers breathability and comfort for your workout sessions."
     },
     {
@@ -393,7 +393,7 @@ const datas = [
       "brand": "Jack & Jones",
       "price": 2499,
       "rating": 4.4,
-      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR7z0AqxCxQIMtiQjFVg7OjPOKipjcR5kKO3Rnvdosvd3OlkN9QbDwPn7TBCwQtLYPXdvXf52EXpSmuYfS6fFYJYA03w9jw_7azL6TRbRWD_rAnknHdWl8LnA&usqp=CAc",
+      image: assets.product36,
       "description": "This cozy hoodie from Jack & Jones offers warmth and style, perfect for winter casual wear."
     },
     {
@@ -404,7 +404,7 @@ const datas = [
       "brand": "H&M",
       "price": 1999,
       "rating": 4.5,
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTnMngVvXgZF94856HnBp9yd5nr__dvHwfQ6ZdKBG0il66aB2iLoxSIZ1ktWTCLm6QdIdU5VQBlBc4roCBQQEWymbBwGgjetjNNsAhZ6n9MPntATVfDqcyQ",
+      image: assets.product37,
       "description": "This stylish jumpsuit from H&M is a versatile piece for both day and evening wear, with a flattering cut."
     },
     {
@@ -415,7 +415,7 @@ const datas = [
       "brand": "Levis",
       "price": 2499,
       "rating": 4.7,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/HLSH022321_1.JPG",
+      image: assets.product38,
       "description": "Levis' iconic jeans offer a perfect fit with superior quality denim, making them a wardrobe staple."
     },
     {
@@ -426,7 +426,7 @@ const datas = [
       "brand": "Highlander",
       "price": 1299,
       "rating": 4.5,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/8905980931363/660/HLTS004282_4.jpg",
+      image: assets.product39,
       "description": "Enhance your everyday fashion with this men's oversized t-shirt in charcoal. Made from soft cotton, it boasts a bold graphic design, short sleeves, and a cozy round neckline. Ideal for achieving a laid-back but stylish appearance."
     },{
       "id": 41,
@@ -436,7 +436,7 @@ const datas = [
       "brand": "Highlander",
       "price": 899,
       "rating": 4.5,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/8905980622315/660/HLZ4000333_2.jpg",
+      image: assets.product40,
       "description": "Enhance your everyday fashion with this men's oversized t-shirt in charcoal. Made from soft cotton, it boasts a bold graphic design, short sleeves, and a cozy round neckline. Ideal for achieving a laid-back but stylish appearance."
     }
 ];

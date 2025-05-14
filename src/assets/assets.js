@@ -50,6 +50,14 @@ import product29 from './product29.png'
 import product30 from './product30.png'
 import product31 from './product31.png'
 import product32 from './product32.png'
+import product33 from './product33.png'
+import product34 from './product34.png'
+import product35 from './product35.png'
+import product36 from './product36.png'
+import product37 from './product37.png'
+import product38 from './product38.png'
+import product39 from './product39.png'
+import product40 from './product40.png'
 
 export const assets = {
     logo,
@@ -101,5 +109,14 @@ export const assets = {
     product30,
     product31,
     product32,
+    product33,
+    product34,
+    product35,
+    product36,
+    product37,
+    product38,
+    product39,
+    product40,
+
 
 }
