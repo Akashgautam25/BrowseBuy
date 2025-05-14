@@ -7,7 +7,6 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Product from './pages/product';  // ✅ Corrected import path
 import Login from './pages/Login';
-import PlaceOrder from './pages/PlaceOrder';
 import Orders from './pages/orders';   // ✅ Make sure this exists in pages folder
 
 const App = () => {
@@ -24,7 +23,6 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/product/:productId" element={<Product />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/place-order" element={<PlaceOrder />} />
           </Routes>
         </main>
       </div>
