@@ -1,6 +1,6 @@
 import { assets } from '../assets/assets';
 import NewsLetterBox from '../components/NewsLetterBox';
-import Title from '../Components/Title';
+import Title from '../components/Title';
 import Footer from '../components/Footer'
 
 const About = () => {
