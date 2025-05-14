@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Akash, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Collection from './pages/collection';
+import Collection from './pages/Products';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Product from './pages/product';  // ✅ Corrected import path
+import Product from './pages/productdetail';  // ✅ Corrected import path
 import Login from './pages/Login';
 import Orders from './pages/orders';   // ✅ Make sure this exists in pages folder
 
