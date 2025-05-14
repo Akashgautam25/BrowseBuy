@@ -5,6 +5,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword
 } from 'firebase/auth';
+import Footer from '../components/Footer';
 
 const Login = () => {
   const location = useLocation();
@@ -149,6 +150,7 @@ const Login = () => {
         </div>
       </form>
     </div>
+    
   );
 };
 

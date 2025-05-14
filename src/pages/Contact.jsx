@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import NewsLetterBox from '../components/NewsLetterBox';
-import Title from '../components/Title';
+import Title from '../Components/Title';
 import Footer from '../components/Footer';
 
 const Contact = () => {
