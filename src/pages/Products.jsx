@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import datas from '../data';
+import Footer from '../components/Footer';
 
 function CollectionPage() {
   const navigate = useNavigate();
@@ -221,7 +222,7 @@ function CollectionPage() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search products..."
-              className="w-full border border-gray-300 px-4 py-2 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-black"
+              className="w-full border border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-1 focus:ring-black"
             />
             {query && (
               <button

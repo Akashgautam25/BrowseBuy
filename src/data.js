@@ -1,3 +1,4 @@
+import { assets } from "./assets/assets";
 const datas = [
   
     {
@@ -8,7 +9,7 @@ const datas = [
       "brand": "Highlander",
       "price": 899,
       "rating": 4.3,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/8905980735640/660/HLSH015692_1.JPG",
+      image: assets.product1,
       "description": "This stylish checked shirt from Highlander is made with premium cotton for comfort and breathability. Perfect for casual outings and daily wear."
     },
     {
@@ -19,7 +20,7 @@ const datas = [
       "brand": "Ketch",
       "price": 499,
       "rating": 4.1,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/HLTS006683_1.JPG",
+      image: assets.product2,
       "description": "Stay on top of the streetwear trend with this oversized printed T-shirt. Bold prints and a relaxed fit make it perfect for casual days."
     },
     {
@@ -30,7 +31,7 @@ const datas = [
       "brand": "Locomotive",
       "price": 1299,
       "rating": 4.5,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/8905980383582/660/PHJN000111_n2.jpg",
+      image: assets.product3,
       "description": "These ripped skinny jeans from Locomotive add an edgy look. Stretchable denim ensures a comfortable fit while making a bold statement."
     },
     {
@@ -41,7 +42,7 @@ const datas = [
       "brand": "Tokyo Talkies",
       "price": 1199,
       "rating": 4.4,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/8909107209953/660/TTJ6010439_3.jpg",
+      image: assets.product4,
       "description": "Embrace feminine elegance with this floral maxi dress. Its flowy silhouette and vibrant print make it perfect for brunches and casual parties."
     },
     {
@@ -52,7 +53,7 @@ const datas = [
       "brand": "Vishudh",
       "price": 899,
       "rating": 4.2,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/8905404209191/660/VNKU011358_6.jpg",
+      image:assets.product5,
       "description": "This straight kurta from Vishudh combines subtle prints and classic cuts, making it ideal for office wear or family gatherings."
     },
     {
@@ -63,7 +64,7 @@ const datas = [
       "brand": "Hoop",
       "price": 399,
       "rating": 4.1,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/8905980273685/660/HLTS004155_1.JPG",
+      image : assets.product6,
       "description": "Keep your little one comfortable with this soft cotton printed T-shirt. Ideal for play and daily adventures."
     },
     {
@@ -74,7 +75,7 @@ const datas = [
       "brand": "Highlander",
       "price": 1599,
       "rating": 4.6,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/8909107104388/660/HLJK001065_2.jpg",
+      image: assets.product7,
       "description": "This sleek bomber jacket from Highlander offers warmth and style. Perfect for casual outings and evening events during winter."
     },
     {
@@ -85,7 +86,7 @@ const datas = [
       "brand": "Tokyo Talkies",
       "price": 499,
       "rating": 4.0,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/8909107075091/660/TTCT000578_2.JPG",
+      image: assets.product8,
       "description": "This trendy crop top adds a playful touch to your wardrobe. Perfect for casual outings and party nights."
     },
     {
@@ -96,7 +97,7 @@ const datas = [
       "brand": "Ketch",
       "price": 799,
       "rating": 4.2,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/8905980334317/660/PHTR000030_1.jpg",
+      image: assets.product9,
       "description": "These versatile joggers from Ketch offer a great fit for lounging, workouts, or casual errands."
     },
     {
@@ -107,7 +108,7 @@ const datas = [
       "brand": "Hoop",
       "price": 699,
       "rating": 4.3,
-      "image": "https://kahva.in/cdn/shop/files/DSC_6425.jpg?v=1731409438&width=1540",
+      image: assets.product10,
       "description": "This cotton night suit for kids offers both comfort and fun with playful prints, making bedtime a joyful experience."
     },
     {
@@ -118,7 +119,7 @@ const datas = [
       "brand": "Roadster",
       "price": 999,
       "rating": 4.4,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/HLSH022618_2.JPG",
+      image: assets.product11,
       "description": "This solid casual shirt from Roadster is perfect for a sharp, classic look. Great for office wear and casual outings."
     },
     {
@@ -129,7 +130,7 @@ const datas = [
       "brand": "H&M",
       "price": 1499,
       "rating": 4.5,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/PHTR000284_2.JPG",
+      image: assets.product12,
       "description": "Upgrade your wardrobe with these slim-fit chinos from H&M. Ideal for both formal and casual occasions."
     },
     {
@@ -140,7 +141,7 @@ const datas = [
       "brand": "Levis",
       "price": 1999,
       "rating": 4.6,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/8905980297483/660/PTJN000058_2.jpg",
+      image: assets.product13,
       "description": "These skinny fit jeans from Levis are tailored to flatter your silhouette while providing ultimate comfort."
     },
     {
@@ -151,7 +152,7 @@ const datas = [
       "brand": "Biba",
       "price": 1899,
       "rating": 4.7,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/52360001506773/660/VNKU006027_2.JPG",
+      image: assets.product14,
       "description": "This Anarkali Kurta from Biba features rich prints and vibrant colors, perfect for festive occasions."
     },
     {
@@ -162,7 +163,7 @@ const datas = [
       "brand": "Max",
       "price": 499,
       "rating": 4.2,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/8905980291740/660/HLCE000009_1.JPG",
+      image: assets.product15,
       "description": "These denim shorts from Max are ideal for playdates and everyday adventures. Stylish and comfy for your little boy."
     },
     {
@@ -173,7 +174,7 @@ const datas = [
       "brand": "H&M",
       "price": 1199,
       "rating": 4.4,
-      "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSvPDllqCK6L7swX7ykWU7aANGo_hUoXp5XE74F8CI_hKdynD4ux3EzXTps8xySIsxngxywMhMVOmVthsnvRc5FflmO5t_ylri4pTkmkpC6iL8VOfti9KD8WNZfpRMeud8TkIi27rY6vg&usqp=CAc",
+      image: assets.product16,
       "description": "This sleeveless party dress for girls by H&M will make her feel like a princess. Perfect for birthday parties and festive occasions."
     },
     {
@@ -184,7 +185,7 @@ const datas = [
       "brand": "HRX",
       "price": 699,
       "rating": 4.3,
-      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/short/v/u/p/32-mshkr02-hrx-by-hrithik-roshan-original-imah9h8fsbsrt5wd.jpeg?q=70",
+      image: assets.product17,
       "description": "These lightweight training shorts from HRX are designed for comfort and agility during workouts."
     },
     {
@@ -195,7 +196,7 @@ const datas = [
       "brand": "Only",
       "price": 699,
       "rating": 4.1,
-      "image": "https://pictures.kartmax.in/cover/live/600x800/quality=6/sites/aPfvUDpPwMn1ZadNKhP7/product-images/TTRC000106_5.JPG",
+      image: assets.product18,
       "description": "This graphic T-shirt from Only is stylish and perfect for pairing with jeans or shorts for a casual look."
     },
     {
@@ -206,7 +207,7 @@ const datas = [
       "brand": "Zara",
       "price": 2499,
       "rating": 4.5,
-      "image": "https://image.uniqlo.com/UQ/ST3/in/imagesgoods/469830/item/ingoods_36_469830_3x4.jpg?width=369",
+      image: assets.product19,
       "description": "This luxe satin skirt from Zara adds elegance to any outfit, ideal for office parties or dinner dates."
     },
     {
@@ -217,7 +218,7 @@ const datas = [
       "brand": "Adidas",
       "price": 799,
       "rating": 4.3,
-      "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/f/0/f024d13IKEA-D02-PL_2.jpg?rnd=20200526195200&tr=w-256",
+      image: assets.product20,
       "description": "This sports T-shirt from Adidas will keep your boy stylish and active during school sports or casual play."
     },
     {
@@ -228,7 +229,7 @@ const datas = [
       "brand": "Pepe Jeans",
       "price": 1799,
       "rating": 4.4,
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQAPevlZTCtfwEg6rUPaTrwfTvTnA9dbg4W_019m7Se1WGKIxJR6Gjpx1nW-C-5JrG993Whp_sSB53VLvFHnuzMAMFTCboob6fDmaXAhugCdq0dotKgsf7kY10&usqp=CAc",
+      image: assets.product21,
       "description": "Stay warm and stylish with this cozy hoodie by Pepe Jeans. Perfect for cold weather or casual outings."
     },{
       "id": 22,
@@ -238,7 +239,7 @@ const datas = [
       "brand": "Adidas",
       "price": 3499,
       "rating": 4.7,
-      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSWmmjeqURuin1Fodc1nSPFwp7TB3Ly7_OO93cvoNojMvAp6kc543v_1oOzQc_OGLU0ARf7tUv0C_Adkr4RCZGR0VJ_CYGm6QCQwapUmMXZ2McfbLsr5pehvgoeZOetLwSyoj_NG2MpZ_g&usqp=CAc",
+      image: assets.product22,
       "description": "These Adidas running shoes provide support and comfort for long-distance runs. A perfect choice for active women."
     },
     {
@@ -249,7 +250,7 @@ const datas = [
       "brand": "Puma",
       "price": 2999,
       "rating": 4.5,
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTu3QPEI_jwb9svrian1HywvsAoP5YslusaUNyL1pKdVvvpPW8XQVaeoO-EglKkFwSJB4DmEg6PigEc7m6XLMWjRhVKbMbB6Ap_3N7aWOhkfxw7bnkr9DFp1iYTvG_gbc8gYV1jJibP&usqp=CAc",
+      image: assets.product23,
       "description": "Stay comfortable and stylish with this sporty jacket from Puma, perfect for outdoor activities and casual outings."
     },
     {
@@ -260,7 +261,7 @@ const datas = [
       "brand": "Fubu",
       "price": 899,
       "rating": 4.3,
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTtXUmxmylTYw47bY6sF4b6euyTzCxu0XyJpVee-rAXZXdbhkc_ImJAluSLax7RyD3mxjA8L7Oi51P7ek5JeArCNX2aF5UuFXbCQdyirsQ7QiMSnjj7LgSC&usqp=CAc",
+      image: assets.product24,
       "description": "These cargo shorts by Fubu offer ample storage space with a relaxed fit, making them ideal for casual and outdoor wear."
     },
     {
@@ -271,7 +272,7 @@ const datas = [
       "brand": "H&M",
       "price": 1299,
       "rating": 4.6,
-      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRpuwA0VefD0rpCkKna7BY9JHyKdfVXxFkoCzY0kr8BxEkWwX0PwMHA63RIdSrYRycVwQgQFFnUCoMc-aKcFzvFU82yCFQqoIOsuPFuPH4E9IcPlMc9wTD-kniEyEQyQ4ilzyL-geg&usqp=CAc",
+      image: assets.product25,
       "description": "This silk blouse from H&M adds a touch of elegance to any outfit. Its light fabric makes it perfect for office wear or evening outings."
     },
     {
@@ -282,7 +283,7 @@ const datas = [
       "brand": "Decathlon",
       "price": 899,
       "rating": 4.4,
-      "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRVNKz_Kw0FGZDuau7LfvrvCi9ScwxlVDQZQVFJhvItk1be8xhgGsOITnRrwzD3wGIZCpvD4yj6NXdyG999ryi-gimBm-UBj6KY_DiosFN_xnR9M9PQ9yfTJZVkNBEb-LPStygbdng&usqp=CAc",
+      image: assets.product26,
       "description": "This active hoodie from Decathlon is perfect for your little one’s outdoor activities. Comfortable and durable for every adventure."
     },
     {
@@ -293,7 +294,7 @@ const datas = [
       "brand": "Superdry",
       "price": 1199,
       "rating": 4.6,
-      "image": "https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/000000410499101010/-Xarjz1vlg-1.jpg?dpr=2",
+      image: assets.product27,
       "description": "This classic T-shirt from Superdry features a bold logo and soft cotton fabric, making it perfect for casual wear."
     },
     {
@@ -304,7 +305,7 @@ const datas = [
       "brand": "Zara",
       "price": 1699,
       "rating": 4.5,
-      "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTFIex4VpyE0R-2zI_SBqxmdkBvDlHvl71O5lr3ZbjVrhKzoBwWMa9C6QTWe_RLG7MiC8vNoNE83vUg1X3fTDk65sYQ0mahKHt9wHRudSKQJnqx66J_fzgE&usqp=CAc",
+      image: assets.product28,
       "description": "This satin top from Zara adds a luxurious touch to your wardrobe, perfect for both office and evening wear."
     },
     {
@@ -315,7 +316,7 @@ const datas = [
       "brand": "H&M",
       "price": 1499,
       "rating": 4.4,
-      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTn1Iwm1fjnWzwKJaFA45z1bv0DW5sKAJ0I-YC6nMNCqmQ3UnorwOMbMAOkP3f9acZxeliZNRVhl0R1jPXazA9dScR4_GLePk7zqtu_R2wJ0N-TsYnE860NApY2vR9fXDsHoZQ479VX43RKDyLZIw&usqp=CAc",
+      image: assets.product29,
       "description": "These slim-fit chinos from H&M are versatile and stylish, perfect for both casual and semi-formal occasions."
     },
     {
@@ -326,7 +327,7 @@ const datas = [
       "brand": "Max",
       "price": 499,
       "rating": 4.3,
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSII5I0bJtFiBTGKw7wrCNWRYNGfv-L7GmXpLEcGVfgZsGun_SSV5-bn8X1KsgemgGmiyCfpEsGAfl8DLqIlzOH4kTdlkHFNM3CFzL9RERltllyZgKcVzW52g",
+      image: assets.product30,
       "description": "This soft cotton T-shirt from Max is perfect for your little one’s everyday wear, featuring a playful design."
     },
     {
@@ -337,7 +338,7 @@ const datas = [
       "brand": "Roadster",
       "price": 899,
       "rating": 4.2,
-      "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS4kM8utx7o6T9eSSFpl5gOJNCOROJaK8jSuJGyF2I0UxgVGHUdkJIbFNicJxcH9iSO69ohdbU48awNhCzDtgj_L092EN8Yi7LSQuK6Hu9j",
+      image: assets.product31,
       "description": "This classic polo T-shirt from Roadster offers a stylish yet casual look, perfect for weekend outings."
     },
     {
@@ -348,7 +349,7 @@ const datas = [
       "brand": "Biba",
       "price": 1299,
       "rating": 4.5,
-      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT_tGsyqa5C6jrmsRsrOn72tcf08Sl2Xcs2VOAKyVmL15Ei8jap-9dKGBH1HaFzZMZGla0ljbq6pMd9L9sn0ruSg3RUQPkByu27vhmh8MF2B8uitHghV43bGg&usqp=CAc",
+      image: assets.product32,
       "description": "This colorful kurti from Biba features intricate designs, perfect for family gatherings and festive events."
     },
     {

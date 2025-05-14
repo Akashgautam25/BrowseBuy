@@ -7,7 +7,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Product from './pages/productdetail';  // Ensure this path is correct
 import Login from './pages/Login';
-import Orders from './pages/orders';  // Make sure this exists in the pages folder
+import Orders from './pages/cart';  // Make sure this exists in the pages folder
+
 
 const App = () => {
   return (
