@@ -365,7 +365,7 @@ const datas = [
     },
     {
       "id": 35,
-      "title": "Decathlon Boys Sports Shorts",
+      "title": "Decathlon Boys Sports Shoes",
       "category": "Kids",
       "type": "Shorts",
       "brand": "Decathlon",
