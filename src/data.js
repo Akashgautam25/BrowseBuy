@@ -19,7 +19,7 @@ const datas = [
       "type": "T-Shirt",
       "brand": "Ketch",
       "price": 499,
-      "rating": 4.1,
+      "rating": 2.9,
       image: assets.product2,
       "description": "Stay on top of the streetwear trend with this oversized printed T-shirt. Bold prints and a relaxed fit make it perfect for casual days."
     },
@@ -30,7 +30,7 @@ const datas = [
       "type": "Jeans",
       "brand": "Locomotive",
       "price": 1299,
-      "rating": 4.5,
+      "rating": 3.5,
       image: assets.product3,
       "description": "These ripped skinny jeans from Locomotive add an edgy look. Stretchable denim ensures a comfortable fit while making a bold statement."
     },
@@ -52,7 +52,7 @@ const datas = [
       "type": "Kurta",
       "brand": "Vishudh",
       "price": 899,
-      "rating": 4.2,
+      "rating": 4.8,
       image:assets.product5,
       "description": "This straight kurta from Vishudh combines subtle prints and classic cuts, making it ideal for office wear or family gatherings."
     },
@@ -63,7 +63,7 @@ const datas = [
       "type": "T-Shirt",
       "brand": "Hoop",
       "price": 399,
-      "rating": 4.1,
+      "rating": 3.1,
       image : assets.product6,
       "description": "Keep your little one comfortable with this soft cotton printed T-shirt. Ideal for play and daily adventures."
     },
@@ -107,7 +107,7 @@ const datas = [
       "type": "Nightwear",
       "brand": "Hoop",
       "price": 699,
-      "rating": 4.3,
+      "rating": 2.3,
       image: assets.product10,
       "description": "This cotton night suit for kids offers both comfort and fun with playful prints, making bedtime a joyful experience."
     },
@@ -129,7 +129,7 @@ const datas = [
       "type": "Trousers",
       "brand": "H&M",
       "price": 1499,
-      "rating": 4.5,
+      "rating": 2.5,
       image: assets.product12,
       "description": "Upgrade your wardrobe with these slim-fit chinos from H&M. Ideal for both formal and casual occasions."
     },
@@ -151,7 +151,7 @@ const datas = [
       "type": "Kurta",
       "brand": "Biba",
       "price": 1899,
-      "rating": 4.7,
+      "rating": 3.7,
       image: assets.product14,
       "description": "This Anarkali Kurta from Biba features rich prints and vibrant colors, perfect for festive occasions."
     },
@@ -228,7 +228,7 @@ const datas = [
       "type": "Hoodie",
       "brand": "Pepe Jeans",
       "price": 1799,
-      "rating": 4.4,
+      "rating": 2.4,
       image: assets.product21,
       "description": "Stay warm and stylish with this cozy hoodie by Pepe Jeans. Perfect for cold weather or casual outings."
     },{
@@ -370,7 +370,7 @@ const datas = [
       "type": "Shorts",
       "brand": "Decathlon",
       "price": 599,
-      "rating": 4.2,
+      "rating": 3.2,
       image: assets.product34,
       "description": "These sporty shorts from Decathlon are made for active kids. Ideal for both sports and casual activities."
     },
@@ -392,7 +392,7 @@ const datas = [
       "type": "Hoodie",
       "brand": "Jack & Jones",
       "price": 2499,
-      "rating": 4.4,
+      "rating": 2.9,
       image: assets.product36,
       "description": "This cozy hoodie from Jack & Jones offers warmth and style, perfect for winter casual wear."
     },
@@ -403,7 +403,7 @@ const datas = [
       "type": "Jumpsuit",
       "brand": "H&M",
       "price": 1999,
-      "rating": 4.5,
+      "rating": 3.5,
       image: assets.product37,
       "description": "This stylish jumpsuit from H&M is a versatile piece for both day and evening wear, with a flattering cut."
     },
