@@ -1,24 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { assets } from '../assets/assets';
-import { NavLink, Link, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-  const [showDropdown, setShowDropdown] = useState(false);
-  const [showMobileMenu, setShowMobileMenu] = useState(false); // For mobile menu toggle
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   const navigate = useNavigate();
-  const dropdownRef = useRef(null);
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setShowDropdown(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
   // Toggle mobile menu visibility
   const toggleMobileMenu = () => {
@@ -48,61 +34,31 @@ const Navbar = () => {
         </NavLink>
       </ul>
 
-      {/* Right Section (Search, Cart, Profile Dropdown, Hamburger Menu) */}
-      <div className="flex items-center gap-5 relative">
-        {/* Search Icon */}
-        <img
-          src={assets.search_icon}
-          alt="search"
-          className="w-5 cursor-pointer"
-          onClick={() => navigate('/collection')}
-        />
-
-        {/* Cart Icon */}
-        <Link to="/cart">
-          <img
-            src={assets.cart_icon}
-            alt="cart"
-            className="w-5 cursor-pointer"
-          />
-        </Link>
-
-        {/* Profile Dropdown */}
-        <div className="relative" ref={dropdownRef}>
-          <img
-            src={assets.profile_icon}
-            alt="profile"
-            className="w-5 cursor-pointer"
-            onClick={() => setShowDropdown((prev) => !prev)}
-          />
-          {showDropdown && (
-            <div className="absolute right-0 mt-2 w-40 bg-white border rounded shadow-lg z-50">
-              <Link
-                to="/orders"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                My Orders
-              </Link>
-              <Link
-                to="/login?mode=signin"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Sign In
-              </Link>
-            </div>
-          )}
-        </div>
+      {/* Right Section: Sign In / Sign Up Buttons + Hamburger */}
+      <div className="flex items-center gap-3 sm:gap-5 relative">
+        <button
+          onClick={() => navigate('/login?mode=signin')}
+          className="px-4 py-2 text-sm border border-black text-black bg-white hover:bg-black hover:text-white transition duration-300 rounded-md"
+        >
+          Sign In
+        </button>
+        <button
+          onClick={() => navigate('/login?mode=signup')}
+          className="px-4 py-2 text-sm border border-black text-white bg-black hover:bg-white hover:text-black transition duration-300 rounded-md"
+        >
+          Sign Up
+        </button>
 
         {/* Hamburger Menu (Mobile) */}
         <img
           src={assets.menu_icon}
           alt="menu"
           className="w-5 cursor-pointer sm:hidden"
-          onClick={toggleMobileMenu} // Toggle mobile menu visibility
+          onClick={toggleMobileMenu}
         />
       </div>
 
-      {/* Mobile Navigation Menu (When Hamburger Icon is Clicked) */}
+      {/* Mobile Navigation Menu */}
       {showMobileMenu && (
         <div className="absolute top-16 left-0 w-full bg-white border-b border-gray-200 sm:hidden">
           <ul className="flex flex-col items-center py-4 text-sm text-gray-700">
