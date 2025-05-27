@@ -1,82 +1,92 @@
-import React, { useState } from 'react';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { assets } from '../assets/assets';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { useCart } from '../context/CartContext';
 
 const Navbar = () => {
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [visible, setVisible] = useState(false);
   const navigate = useNavigate();
 
-  // Toggle mobile menu visibility
-  const toggleMobileMenu = () => {
-    setShowMobileMenu((prev) => !prev);
-  };
+  const { cartItems } = useCart();
+  const cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <div className="flex items-center justify-between py-5 font-medium border-b border-gray-200 relative z-50">
+    <div className="flex items-center justify-between py-5 font-medium px-4 sm:px-8 relative z-50 ">
       {/* Logo */}
-      <NavLink to="/">
+      <Link to="/">
         <img src={assets.logo} alt="logo" className="w-36" />
-      </NavLink>
+      </Link>
 
-      {/* Desktop Navigation Links */}
-      <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
-        <NavLink to="/" className="flex flex-col items-center gap-1">
-          <p>HOME</p>
-        </NavLink>
-        <NavLink to="/collection" className="flex flex-col items-center gap-1">
-          <p>PRODUCTS</p>
-        </NavLink>
-        <NavLink to="/about" className="flex flex-col items-center gap-1">
-          <p>ABOUT</p>
-        </NavLink>
-        <NavLink to="/contact" className="flex flex-col items-center gap-1">
-          <p>CONTACT</p>
-        </NavLink>
+      {/* Desktop Navigation */}
+      <ul className="hidden sm:flex gap-6 text-sm text-gray-700">
+        <NavLink to="/" className="hover:text-black">HOME</NavLink>
+        <NavLink to="/collection" className="hover:text-black">PRODUCTS</NavLink>
+        <NavLink to="/about" className="hover:text-black">ABOUT</NavLink>
+        <NavLink to="/contact" className="hover:text-black">CONTACT</NavLink>
       </ul>
 
-      {/* Right Section: Sign In / Sign Up Buttons + Hamburger */}
-      <div className="flex items-center gap-3 sm:gap-5 relative">
-        <button
-          onClick={() => navigate('/login?mode=signin')}
-          className="px-4 py-2 text-sm border border-black text-black bg-white hover:bg-black hover:text-white transition duration-300 rounded-md"
-        >
-          Sign In
-        </button>
-        <button
-          onClick={() => navigate('/login?mode=signup')}
-          className="px-4 py-2 text-sm border border-black text-white bg-black hover:bg-white hover:text-black transition duration-300 rounded-md"
-        >
-          Sign Up
-        </button>
+      {/* Right-side Icons */}
+      <div className="flex items-center gap-6">
+        {/* Search */}
+        <img
+          src={assets.search_icon}
+          alt="Search"
+          className="w-5 cursor-pointer"
+          onClick={() => navigate('/collection')}
+        />
 
-        {/* Hamburger Menu (Mobile) */}
+        {/* Profile Icon navigates directly to Sign In */}
+        <img
+          src={assets.profile_icon}
+          alt="Profile"
+          className="w-5 cursor-pointer"
+          onClick={() => navigate('/login?mode=signin')}
+        />
+
+        {/* Cart */}
+        <Link to="/cart" className="relative">
+          <img src={assets.cart_icon} alt="Cart" className="w-5" />
+          {cartCount > 0 && (
+            <p className="absolute -right-2 -bottom-2 w-4 h-4 bg-black text-white text-[10px] flex items-center justify-center rounded-full">
+              {cartCount}
+            </p>
+          )}
+        </Link>
+
+        {/* Mobile Menu */}
         <img
           src={assets.menu_icon}
-          alt="menu"
+          alt="Menu"
           className="w-5 cursor-pointer sm:hidden"
-          onClick={toggleMobileMenu}
+          onClick={() => setVisible(!visible)}
         />
       </div>
 
-      {/* Mobile Navigation Menu */}
-      {showMobileMenu && (
-        <div className="absolute top-16 left-0 w-full bg-white border-b border-gray-200 sm:hidden">
-          <ul className="flex flex-col items-center py-4 text-sm text-gray-700">
-            <NavLink to="/" className="py-2" onClick={toggleMobileMenu}>
-              HOME
-            </NavLink>
-            <NavLink to="/collection" className="py-2" onClick={toggleMobileMenu}>
-              PRODUCTS
-            </NavLink>
-            <NavLink to="/about" className="py-2" onClick={toggleMobileMenu}>
-              ABOUT
-            </NavLink>
-            <NavLink to="/contact" className="py-2" onClick={toggleMobileMenu}>
-              CONTACT
-            </NavLink>
-          </ul>
+      {/* Mobile Dropdown */}
+      <div
+        className={`fixed top-0 right-0 h-full bg-white shadow-lg z-40 transition-all duration-300 ${
+          visible ? 'w-64' : 'w-0 overflow-hidden'
+        }`}
+      >
+        <div className="flex flex-col text-gray-600 pt-4">
+          <div
+            onClick={() => setVisible(false)}
+            className="flex items-center gap-4 p-3 cursor-pointer"
+          >
+            <img
+              src={assets.dropdown_icon}
+              alt="Back"
+              className="h-4 rotate-180"
+            />
+            <p className="font-semibold">Back</p>
+          </div>
+
+          <NavLink onClick={() => setVisible(false)} className="py-3 pl-6 border-t" to="/">HOME</NavLink>
+          <NavLink onClick={() => setVisible(false)} className="py-3 pl-6 border-t" to="/collection">PRODUCTS</NavLink>
+          <NavLink onClick={() => setVisible(false)} className="py-3 pl-6 border-t" to="/about">ABOUT</NavLink>
+          <NavLink onClick={() => setVisible(false)} className="py-3 pl-6 border-t" to="/contact">CONTACT</NavLink>
         </div>
-      )}
+      </div>
     </div>
   );
 };

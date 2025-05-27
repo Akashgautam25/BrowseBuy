@@ -8,6 +8,8 @@ import Contact from './pages/Contact';
 import Product from './pages/productdetail';  // Ensure this path is correct
 import Login from './pages/Login';
 import Orders from './pages/cart';  // Make sure this exists in the pages folder
+import Checkout from './pages/checkout'
+
 
 
 const App = () => {
@@ -24,6 +26,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/product/:productId" element={<Product />} />
             <Route path="/login" element={<Login />} />
+            <Route path='/checkout' element={<Checkout/>}/>
           </Routes>
         </main>
       </div>
