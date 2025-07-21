@@ -1,22 +1,31 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  // Using Router as the alias
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Collection from './pages/Products';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Product from './pages/productdetail';  // Ensure this path is correct
+import Product from './pages/productdetail';
 import Login from './pages/Login';
-import Orders from './pages/cart';  // Make sure this exists in the pages folder
-import Checkout from './pages/checkout'
-
-
+import Orders from './pages/cart';
+import Checkout from './pages/checkout';
 
 const App = () => {
+  const [user, setUser] = useState(null);
+
+  // Load user from localStorage on app load
+  useEffect(() => {
+    const storedUser = localStorage.getItem('firebaseUser');
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
   return (
     <Router>
       <div className="px-4 sm:px-[5vw] flex flex-col min-h-screen">
-        <Navbar />
+        {/* ✅ Pass user to Navbar (optional) */}
+        <Navbar user={user} />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -26,7 +35,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/product/:productId" element={<Product />} />
             <Route path="/login" element={<Login />} />
-            <Route path='/checkout' element={<Checkout/>}/>
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </main>
       </div>
