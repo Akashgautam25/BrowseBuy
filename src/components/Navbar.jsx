@@ -11,13 +11,11 @@ const Navbar = () => {
   const cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <div className="flex items-center justify-between py-5 font-medium px-4 sm:px-8 relative z-50 ">
-      {/* Logo */}
+    <div className="flex items-center justify-between py-5 font-medium px-4 sm:px-8 relative z-50">
       <Link to="/">
         <img src={assets.logo} alt="logo" className="w-36" />
       </Link>
 
-      {/* Desktop Navigation */}
       <ul className="hidden sm:flex gap-6 text-sm text-gray-700">
         <NavLink to="/" className="hover:text-black">HOME</NavLink>
         <NavLink to="/collection" className="hover:text-black">PRODUCTS</NavLink>
@@ -25,9 +23,7 @@ const Navbar = () => {
         <NavLink to="/contact" className="hover:text-black">CONTACT</NavLink>
       </ul>
 
-      {/* Right-side Icons */}
       <div className="flex items-center gap-6">
-        {/* Search */}
         <img
           src={assets.search_icon}
           alt="Search"
@@ -35,15 +31,6 @@ const Navbar = () => {
           onClick={() => navigate('/collection')}
         />
 
-        {/* Profile Icon navigates directly to Sign In */}
-        <img
-          src={assets.profile_icon}
-          alt="Profile"
-          className="w-5 cursor-pointer"
-          onClick={() => navigate('/login?mode=signin')}
-        />
-
-        {/* Cart */}
         <Link to="/cart" className="relative">
           <img src={assets.cart_icon} alt="Cart" className="w-5" />
           {cartCount > 0 && (
@@ -53,7 +40,6 @@ const Navbar = () => {
           )}
         </Link>
 
-        {/* Mobile Menu */}
         <img
           src={assets.menu_icon}
           alt="Menu"
@@ -62,7 +48,6 @@ const Navbar = () => {
         />
       </div>
 
-      {/* Mobile Dropdown */}
       <div
         className={`fixed top-0 right-0 h-full bg-white shadow-lg z-40 transition-all duration-300 ${
           visible ? 'w-64' : 'w-0 overflow-hidden'

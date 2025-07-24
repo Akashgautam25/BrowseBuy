@@ -6,7 +6,7 @@ import {
   signInWithEmailAndPassword
 } from 'firebase/auth';
 
-const Login = () => {
+const Login = ({ setUser }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const [currentState, setCurrentState] = useState('Sign In');
@@ -22,7 +22,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setErrors({}); // reset previous errors
+    setErrors({});
 
     const email = document.getElementById('email')?.value.trim();
     const password = document.getElementById('password')?.value.trim();
@@ -47,15 +47,19 @@ const Login = () => {
     }
 
     try {
+      let userCredential;
+
       if (currentState === 'Sign In') {
-        await signInWithEmailAndPassword(auth, email, password);
-        navigate('/');
+        userCredential = await signInWithEmailAndPassword(auth, email, password);
       } else {
-        await createUserWithEmailAndPassword(auth, email, password);
-        navigate('/login?mode=signin');
+        userCredential = await createUserWithEmailAndPassword(auth, email, password);
       }
+
+      const user = userCredential.user;
+      localStorage.setItem('firebaseUser', JSON.stringify(user));
+      setUser(user);
+      navigate('/');
     } catch (error) {
-      // Set Firebase error under email field
       setErrors({ email: error.message });
     }
   };
